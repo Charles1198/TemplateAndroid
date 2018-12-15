@@ -53,7 +53,7 @@ dependencies {
     api 'com.squareup.retrofit2:converter-gson:2.0.2'
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
     api 'com.yinglan.keyboard:hidekeyboard:1.2.0'
-    api('com.alibaba:arouter-api:1.4.0') {
+    api('com.alibaba:arouter-api:1.4.1') {
         exclude module: 'support-v4'
     }
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
@@ -61,4 +61,5 @@ dependencies {
     implementation 'com.tencent:mmkv:1.0.10'
     implementation 'com.hjq:toast:3.0'
     api 'com.airbnb.android:lottie:2.7.0'
+    api 'com.flaviofaria:kenburnsview:1.0.7'
 }

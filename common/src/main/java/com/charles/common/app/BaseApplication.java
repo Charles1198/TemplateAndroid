@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.common.error.CrashHandler;
 import com.charles.common.util.ToastUtil;
 import com.hjq.toast.ToastUtils;
