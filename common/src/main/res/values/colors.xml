@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6495ED</color>
+    <color name="colorPrimaryDark">#6495ED</color>
+    <color name="colorAccent">#6495ED</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="loadingBg">#60000000</color>
+
+    <color name="xadsdk_yd_dialog_cancel_normal">#fffafafa</color>
+    <color name="xadsdk_yd_dialog_cancel_pressed">#ffe7e7e7</color>
+    <color name="xadsdk_yd_dialog_ok_normal">#1500baff</color>
+    <color name="xadsdk_yd_dialog_ok_pressed">#33049dd5</color>
+    <color name="xadsdk_frame_bg">#e5e5e5</color>
+</resources>
