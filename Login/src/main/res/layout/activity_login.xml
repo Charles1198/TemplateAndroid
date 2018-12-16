@@ -5,16 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.flaviofaria.kenburnsview.KenBurnsView
+    <!--<com.flaviofaria.kenburnsview.KenBurnsView-->
+        <!--android:id="@+id/login_bg_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@mipmap/login_bg"-->
+        <!--android:scaleType="centerCrop"/>-->
+
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/login_bg_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/login_bg"
-        android:scaleType="centerCrop"/>
-
-    <!--<com.flaviofaria.kenburnsview.KenBurnsView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent" />-->
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"

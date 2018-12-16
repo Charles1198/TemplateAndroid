@@ -61,5 +61,4 @@ dependencies {
     implementation 'com.tencent:mmkv:1.0.10'
     implementation 'com.hjq:toast:3.0'
     api 'com.airbnb.android:lottie:2.7.0'
-    api 'com.flaviofaria:kenburnsview:1.0.7'
 }

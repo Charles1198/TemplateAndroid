@@ -1,6 +1,7 @@
 package com.charles.login.function.login;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.design.widget.TextInputLayout;
 import android.os.Bundle;
 import android.support.v7.content.res.AppCompatResources;
@@ -20,6 +21,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.common.base.BaseActivity;
 import com.charles.common.kv.Kv;
 import com.charles.common.network.response.UpdateResp;
+import com.charles.common.util.ImageUtil;
 import com.charles.common.util.StringUtil;
 import com.charles.login.LoginConst;
 import com.charles.login.R;
@@ -33,6 +35,7 @@ import com.yinglan.keyboard.HideUtil;
  */
 @Route(path = "/login/LoginActivity")
 public class LoginActivity extends BaseActivity implements View.OnClickListener, LoginView {
+    private ImageView bgImageView;
     private EditText accountEdt;
     private EditText passwordEdt;
     private TextInputLayout passwordInput;
@@ -55,10 +58,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     }
 
     private void initView() {
+        bgImageView = findViewById(R.id.login_bg_image);
         accountEdt = findViewById(R.id.login_account_edt);
         passwordEdt = findViewById(R.id.login_password_edt);
         passwordInput = findViewById(R.id.login_password_input);
         loginBtn = findViewById(R.id.login_login_btn);
+
+        bgImageView.setImageBitmap(ImageUtil.rsBlur(this,
+                BitmapFactory.decodeResource(getResources(), R.mipmap.login_bg, null), 20));
 
         accountEdt.addTextChangedListener(new MyTextWatcher(accountEdt));
         passwordEdt.addTextChangedListener(new MyTextWatcher(passwordEdt));
