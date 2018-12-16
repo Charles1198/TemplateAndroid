@@ -31,6 +31,7 @@ import com.charles.common.update.UpdateService;
 import com.charles.common.util.FileUtil;
 import com.charles.common.util.ToastUtil;
 import com.google.gson.Gson;
+import com.yinglan.keyboard.HideUtil;
 
 import java.io.File;
 import java.util.Objects;
@@ -120,8 +121,7 @@ public class BaseActivity extends AppCompatActivity implements BaseView {
 
     public void hideKeyboard() {
         //隐藏键盘
-        ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
-                .hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        HideUtil.hideSoftKeyboard(this);
     }
 
     private void gotUpdateInfo(UpdateResp updateResp) {

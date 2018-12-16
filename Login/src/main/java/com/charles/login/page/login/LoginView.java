@@ -1,4 +1,4 @@
-package com.charles.login.function.login;
+package com.charles.login.page.login;
 
 import com.charles.common.base.BaseView;
 import com.charles.common.network.response.UpdateResp;

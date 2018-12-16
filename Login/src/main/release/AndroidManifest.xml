@@ -8,15 +8,15 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".function.login.LoginActivity">
+        <activity android:name=".page.login.LoginActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".function.register.RegisterActivity" />
-        <activity android:name=".function.resetpwd.ResetPasswordActivity"/>
+        <activity android:name=".page.register.RegisterActivity" />
+        <activity android:name=".page.resetpwd.ResetPasswordActivity"/>
     </application>
 
 </manifest>

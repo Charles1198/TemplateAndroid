@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.FitWindowsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="40dp"
     android:orientation="vertical">
-
-    <!--<com.flaviofaria.kenburnsview.KenBurnsView-->
-        <!--android:id="@+id/login_bg_image"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:src="@mipmap/login_bg"-->
-        <!--android:scaleType="centerCrop"/>-->
-
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/login_bg_image"
-        android:layout_width="match_parent"
-        android:scaleType="centerCrop"
-        android:layout_height="match_parent" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -51,36 +39,15 @@
 
     </android.support.design.widget.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/login_remember_checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginEnd="40dp"
-        android:text="@string/login_remember_count"
-        android:textSize="12sp"
-        android:textColor="@color/login_blue"
-        android:theme="@style/BlueCheckBox" />
-
     <Button
         android:id="@+id/login_login_btn"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
-        android:background="@drawable/shape_btn"
         android:text="@string/login_login"
-        android:textColor="@color/login_white"
         android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:text="演示程序请直接点击登录"
-        android:textSize="12sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -116,4 +83,4 @@
 
     </LinearLayout>
 
-</android.support.v7.widget.FitWindowsFrameLayout>
+</android.support.v7.widget.FitWindowsLinearLayout>

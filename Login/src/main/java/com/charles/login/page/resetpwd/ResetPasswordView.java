@@ -1,4 +1,4 @@
-package com.charles.login.function.resetpwd;
+package com.charles.login.page.resetpwd;
 
 /**
  * @author charles

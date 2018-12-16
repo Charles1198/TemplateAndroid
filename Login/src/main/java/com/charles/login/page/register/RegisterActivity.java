@@ -1,4 +1,4 @@
-package com.charles.login.function.register;
+package com.charles.login.page.register;
 
 import android.os.CountDownTimer;
 import android.os.Bundle;

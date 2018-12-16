@@ -1,4 +1,4 @@
-package com.charles.login.function.register;
+package com.charles.login.page.register;
 
 import com.charles.common.base.BaseView;
 

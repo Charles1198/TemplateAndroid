@@ -11,14 +11,14 @@
         android:supportsRtl="true"
         tools:replace="android:label"
         android:theme="@style/AppTheme">
-        <activity android:name=".function.login.LoginActivity">
+        <activity android:name=".page.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.charles.login.function.register.RegisterActivity"/>
+        <activity android:name="com.charles.login.page.register.RegisterActivity"/>
     </application>
 
 </manifest>

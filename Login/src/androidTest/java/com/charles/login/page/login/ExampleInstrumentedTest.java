@@ -1,4 +1,4 @@
-package com.charles.login.function.login;
+package com.charles.login.page.login;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

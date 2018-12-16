@@ -1,4 +1,4 @@
-package com.charles.login.function.resetpwd;
+package com.charles.login.page.resetpwd;
 
 import com.charles.common.network.AbstractMyCallBack;
 import com.charles.common.network.NetworkUtil;
@@ -6,7 +6,6 @@ import com.charles.common.network.response.BaseResp;
 import com.charles.login.api.ApiManager;
 
 import retrofit2.Call;
-import retrofit2.Response;
 
 /**
  * @author charles
