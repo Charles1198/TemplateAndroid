@@ -22,9 +22,11 @@ public class LoginPresenter {
     public static final String TEST_USERNAME = "username";
     public static final String TEST_PASSWORD = "password";
     private LoginView loginView;
+    private ApiManager apiManager;
 
     LoginPresenter(LoginView loginView) {
         this.loginView = loginView;
+        apiManager = NetworkUtil.createApiManager(ApiManager.class);
     }
 
     public void login() {
@@ -38,6 +40,7 @@ public class LoginPresenter {
         final String account = loginView.getAccount();
         final String password = loginView.getPassword();
 
+        // 模拟网络连接
         new Handler().postDelayed(() -> {
             loginView.hideLoading();
             if (account.equals(TEST_USERNAME) && password.equals(TEST_PASSWORD)) {
@@ -46,5 +49,35 @@ public class LoginPresenter {
                 loginView.loginFail("用户名或密码错误(username/password)");
             }
         }, 3000);
+
+        /*
+        Call<BaseResp<TokenResp>> call = apiManager.login(account, password);
+        call.enqueue(new AbstractMyCallBack<BaseResp<TokenResp>>() {
+            @Override
+            public void onSuc(BaseResp<TokenResp> response) {
+                loginView.loginSucceed();
+
+                saveAccount(account, password);
+            }
+
+            @Override
+            public void onFail(String message) {
+                loginView.loginFail(message);
+            }
+
+            @Override
+            public void requestAgain() {
+            }
+        });
+        */
     }
+
+    /*
+    private void saveAccount(String account, String password) {
+        if (Kv.getBool(LoginConst.REMEMBER_ACCOUNT, true)) {
+            Kv.setString(LoginConst.ACCOUNT, account);
+            Kv.setString(LoginConst.PASSWORD, password);
+        }
+    }
+    */
 }

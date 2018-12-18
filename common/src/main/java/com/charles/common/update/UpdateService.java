@@ -90,8 +90,8 @@ public class UpdateService extends Service {
         request.setTitle("易教考");
         request.allowScanningByMediaScanner();
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(context,
-                Environment.DIRECTORY_DOWNLOADS, Constant.APP_NAME + ".apk");
+        request.setDestinationInExternalFilesDir(context, Environment.DIRECTORY_DOWNLOADS,
+                Constant.APP_NAME + ".apk");
 
         downloadManager = (DownloadManager) context.getSystemService(DOWNLOAD_SERVICE);
         downloadId = downloadManager.enqueue(request);

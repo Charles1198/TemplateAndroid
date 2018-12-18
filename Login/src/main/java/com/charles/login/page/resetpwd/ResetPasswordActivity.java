@@ -36,7 +36,7 @@ public class ResetPasswordActivity extends BaseActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reset_password);
+        setContentView(R.layout.login_activity_reset_password);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         HideUtil.init(this);
 

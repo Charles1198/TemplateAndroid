@@ -39,7 +39,7 @@ public class RegisterActivity extends BaseActivity implements RegisterView, View
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.login_activity_register);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         HideUtil.init(this);
 
