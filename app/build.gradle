@@ -35,7 +35,9 @@ dependencies {
 
     if (!isBuildModule.toBoolean()) {
         implementation project(':Login')
+        implementation project(':User')
     }
     implementation project(':common')
+    implementation project(':resource')
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 }

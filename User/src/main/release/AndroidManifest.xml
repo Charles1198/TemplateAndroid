@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.charles.user">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".function.main.UserActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".function.setting.SettingActivity" />
+        <activity android:name=".function.feedback.FeedbackActivity" />
+        <activity android:name=".function.range.RangeActivity" />
+    </application>
+
+</manifest>

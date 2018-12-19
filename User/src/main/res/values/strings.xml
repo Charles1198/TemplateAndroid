@@ -1,0 +1,13 @@
+<resources>
+    <string name="user_app_name">user</string>
+
+    <string name="user_setting">设置</string>
+    <string name="user_back">返回</string>
+    <string name="reset_password">修改密码</string>
+    <string name="about_us">关于我们</string>
+    <string name="logout">退出登录</string>
+    <string name="setting_feedback">意见反馈</string>
+    <string name="feedback_submit">提交</string>
+    <string name="feedback_describe">您的反馈意见将帮助我们提供更好的服务</string>
+    <string name="reset_info">修改资料</string>
+</resources>

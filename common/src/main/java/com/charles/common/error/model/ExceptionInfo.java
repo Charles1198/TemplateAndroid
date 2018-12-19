@@ -6,7 +6,7 @@ import com.charles.common.Constant;
 import com.charles.common.device.GetDeviceInfo;
 import com.charles.common.network.NetworkUtil;
 import com.charles.common.util.DateUtil;
-import com.charles.common.util.Tools;
+import com.charles.common.util.AppUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,7 +46,7 @@ public class ExceptionInfo {
     public ExceptionInfo(Thread th, Throwable ex) {
         shortName = Constant.APP_NAME;
         exceptionType = "1";
-        appVersion = Tools.getAppVersion();
+        appVersion = AppUtil.getAppVersion();
         deviceUUID = GetDeviceInfo.getDeviceId();
         phoneNetwork = NetworkUtil.getNetworkState();
         OSRelease = Build.VERSION.RELEASE;

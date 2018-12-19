@@ -9,7 +9,6 @@ import com.charles.common.util.TokenUtil;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Headers;
 
 /**
  * @author charles

@@ -10,7 +10,7 @@ import com.charles.common.network.ApiManager;
 import com.charles.common.network.NetworkUtil;
 import com.charles.common.network.response.BaseResp;
 import com.charles.common.network.response.UpdateResp;
-import com.charles.common.util.Tools;
+import com.charles.common.util.AppUtil;
 import com.google.gson.Gson;
 
 import retrofit2.Call;
@@ -30,7 +30,7 @@ public class CheckUpdate {
 
         String shortName = Constant.APP_NAME;
         String platform = "1";
-        final String version = Tools.getAppVersion();
+        final String version = AppUtil.getAppVersion();
 
         Call<BaseResp<UpdateResp>> call = apiManager.checkUpdate(shortName, platform, version);
         call.enqueue(new AbstractMyCallBack<BaseResp<UpdateResp>>() {
@@ -50,7 +50,7 @@ public class CheckUpdate {
     }
 
     private static void gotUpdateResp(UpdateResp updateResp) {
-        String curVersion = Tools.getAppVersion();
+        String curVersion = AppUtil.getAppVersion();
         String version = updateResp.getVersion();
         if (curVersion.compareTo(version) == -1) {
             // 有更新，发送更新广播

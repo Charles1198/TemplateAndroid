@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/user_blue">
+
+        <TextView
+            android:id="@+id/setting_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/ic_chevron_left_white_48dp"
+            android:drawablePadding="-12dp"
+            android:gravity="center"
+            android:text="@string/user_back"
+            android:textColor="@color/user_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/user_setting"
+            android:textColor="@color/user_white"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/user_white">
+
+        <TextView
+            android:id="@+id/setting_reset_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:selectableItemBackground"
+            android:drawableEnd="@drawable/ic_chevron_right_gray_24dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/reset_info"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/user_white">
+
+        <TextView
+            android:id="@+id/setting_reset_password_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:selectableItemBackground"
+            android:drawableEnd="@drawable/ic_chevron_right_gray_24dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/reset_password"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/user_white">
+
+        <TextView
+            android:id="@+id/setting_feedback_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:selectableItemBackground"
+            android:drawableEnd="@drawable/ic_chevron_right_gray_24dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/setting_feedback"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/user_white">
+
+        <TextView
+            android:id="@+id/setting_about_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:selectableItemBackground"
+            android:drawableEnd="@drawable/ic_chevron_right_gray_24dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/about_us"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/user_white">
+
+        <TextView
+            android:id="@+id/setting_logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:selectableItemBackground"
+            android:drawableEnd="@drawable/ic_chevron_right_gray_24dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/logout"
+            android:textColor="@color/text_gray"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</LinearLayout>

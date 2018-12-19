@@ -1,7 +1,6 @@
 package com.charles.common.util;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -14,14 +13,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by charles on 16/10/17.
+ *
+ * @author charles
+ * @date 16/10/17
  */
 
 public class FileUtil {
-    private static final String DIR_IMAGE_CREATE_AT = "dir_image_create_at";
-    private static final String DIR_AVATAR_CREATE_AT = "dir_avatar_create_at";
-    private static final String DIR_FILE_CREATE_AT = "dir_file_create_at";
-
     /**
      * 是否含有文件file
      *
@@ -41,8 +38,8 @@ public class FileUtil {
         return false;
     }
 
-    public static boolean hasFile(String filePath, String Filename) {
-        File file = new File(filePath, Filename);
+    public static boolean existsFile(String filePath, String filename) {
+        File file = new File(filePath, filename);
         return file.exists();
     }
 
@@ -166,7 +163,6 @@ public class FileUtil {
         } catch (IOException e) {
             Log.e("activity_login activity", "Can not read file: " + e.toString());
         }
-
         return string;
     }
 

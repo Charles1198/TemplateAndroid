@@ -17,8 +17,15 @@ import android.support.v4.app.ActivityCompat;
 import com.charles.common.R;
 import com.charles.common.base.BaseActivity;
 
+/**
+ * @author charles
+ * <p>
+ * 这个Activity是在Android版本大于等于8.0情况下，app版本更新时向程序授予"安装位置来源应用"权限的
+ * <p>
+ * 需要在app的manifests文件中注册
+ */
 public class AndroidOPermissionActivity extends BaseActivity {
-    public static final int INSTALL_PACKAGES_REQUESTCODE = 1;
+    public static final int INSTALL_PACKAGES_REQUEST_CODE = 1;
     private AlertDialog mAlertDialog;
     public static UpdateService.AndroidOInstallPermissionListener sListener;
 
@@ -27,57 +34,43 @@ public class AndroidOPermissionActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         // 弹窗
-
-        if (Build.VERSION.SDK_INT >= 26) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.REQUEST_INSTALL_PACKAGES}, INSTALL_PACKAGES_REQUESTCODE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.REQUEST_INSTALL_PACKAGES}, INSTALL_PACKAGES_REQUEST_CODE);
         } else {
             finish();
         }
-
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case INSTALL_PACKAGES_REQUESTCODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (sListener != null) {
-                        sListener.permissionSuccess();
-                        finish();
-                    }
-                } else {
-                    //startInstallPermissionSettingActivity();
-                    showDialog();
+        if (requestCode == INSTALL_PACKAGES_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (sListener != null) {
+                    sListener.permissionSuccess();
+                    finish();
                 }
-                break;
-
+            } else {
+                showDialog();
+            }
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void showDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.app_name);
         builder.setMessage("为了正常升级 xxx APP，请点击设置按钮，允许安装未知来源应用，本功能只限用于 xxx APP版本升级");
-        builder.setPositiveButton("设置", new DialogInterface.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                startInstallPermissionSettingActivity();
-                mAlertDialog.dismiss();
-            }
+        builder.setPositiveButton("设置", (dialogInterface, i) -> {
+            startInstallPermissionSettingActivity();
+            mAlertDialog.dismiss();
         });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if (sListener != null) {
-                    sListener.permissionFail();
-                }
-                mAlertDialog.dismiss();
-                finish();
+        builder.setNegativeButton("取消", (dialogInterface, i) -> {
+            if (sListener != null) {
+                sListener.permissionFail();
             }
+            mAlertDialog.dismiss();
+            finish();
         });
         mAlertDialog = builder.create();
         mAlertDialog.show();

@@ -8,17 +8,14 @@ import android.os.Build;
 
 import com.charles.common.Constant;
 import com.charles.common.app.BaseApplication;
-import com.charles.common.util.Tools;
+import com.charles.common.util.AppUtil;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -31,14 +28,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkUtil {
     public static final String SUCCESS = "S0000000";
+
     /**
      * AppManager地址
      */
     private static final String APP_MANAGER_ADDRESS = "https://yapi.bqteam.com/mock/11/";
+
     /**
      * 应用服务器地址
      */
-//    private static final String BASE_URL = "http://container-tomcat-test-8-jre8.bqteam.com/jszgz/";
     private static final String BASE_URL = "https://api-tomcat-test.bqteam.com/jszgz/";
 
     /**
@@ -52,7 +50,9 @@ public class NetworkUtil {
     private static final String NO_NETWORK_STRING = "noNetwork";
 
     @SuppressLint("DefaultLocale")
-    private static final String USER_AGENT = String.format("ShortName/%s AppVersion/%s OSRelease/Android@%d Model/%s Brand/%s", Constant.APP_NAME, Tools.getAppVersion(), Build.VERSION.SDK_INT, Build.MODEL, Build.BRAND);
+    private static final String USER_AGENT =
+            String.format("ShortName/%s AppVersion/%s OSRelease/Android@%d Model/%s Brand/%s",
+                    Constant.APP_NAME, AppUtil.getAppVersion(), Build.VERSION.SDK_INT, Build.MODEL, Build.BRAND);
 
     /**
      * 从服务器返回回来的出错信息

@@ -47,6 +47,7 @@ import static android.content.ContentValues.TAG;
 
 public class UpdateService extends Service {
     public static String UPDATE_URL = "updateUrl";
+    public static String UPDATE_DOWNLOADED_AOK = "updateDownloadedApk";
 
     private Context context;
 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/user_blue">
+
+        <TextView
+            android:id="@+id/feedback_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/ic_chevron_left_white_48dp"
+            android:drawablePadding="-12dp"
+            android:gravity="center"
+            android:text="@string/user_back"
+            android:textColor="@color/user_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/setting_feedback"
+            android:textColor="@color/user_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/feedback_submit_btn"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/feedback_submit"
+            android:textColor="@color/user_white"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/feedback_describe" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:background="@color/color_white">
+
+        <EditText
+            android:id="@+id/feedback_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="100"
+            android:textSize="16sp"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/feedback_content_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/100"
+            android:layout_gravity="end|bottom"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="截图（选填）" />
+
+    <ImageView
+        android:id="@+id/feedback_image"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        android:src="@mipmap/img_feedback_empty" />
+
+</LinearLayout>
