@@ -7,6 +7,7 @@ import com.charles.common.network.ApiManager;
 import com.charles.common.network.NetworkUtil;
 import com.charles.common.network.response.BaseResp;
 import com.charles.common.network.response.FeedbackIdResp;
+import com.charles.user.model.FeedbackBody;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

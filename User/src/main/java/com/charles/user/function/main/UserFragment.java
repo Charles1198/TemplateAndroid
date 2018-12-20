@@ -6,13 +6,9 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.charles.common.base.BaseFragment;
-import com.charles.common.kv.Kv;
-import com.charles.common.kv.KvKey;
 import com.charles.user.R;
-import com.charles.user.function.range.RangeActivity;
 import com.charles.user.function.setting.SettingActivity;
 
 /**
@@ -21,8 +17,6 @@ import com.charles.user.function.setting.SettingActivity;
  * @description
  */
 public class UserFragment extends BaseFragment implements View.OnClickListener {
-    private TextView examTargetTv;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,17 +30,7 @@ public class UserFragment extends BaseFragment implements View.OnClickListener {
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        int range = Kv.getInt(KvKey.EXAM_RANGE, 3);
-        examTargetTv.setText(String.format("教师资格证 %s", RangeActivity.RANGE_STRINGS[range]));
-    }
-
     private void initView(View view) {
-        examTargetTv = view.findViewById(R.id.user_exam_target_tv);
-        examTargetTv.setOnClickListener(this);
         view.findViewById(R.id.user_setting_btn).setOnClickListener(this);
     }
 
@@ -55,8 +39,6 @@ public class UserFragment extends BaseFragment implements View.OnClickListener {
         int viewId = v.getId();
         if (viewId == R.id.user_setting_btn) {
             startActivity(new Intent(getActivity(), SettingActivity.class));
-        } else if (viewId == R.id.user_exam_target_tv) {
-            startActivity(new Intent(getActivity(), RangeActivity.class));
         }
     }
 }

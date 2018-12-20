@@ -7,7 +7,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/user_blue">
+        android:background="@color/colorPrimary">
 
         <TextView
             android:id="@+id/setting_back_tv"

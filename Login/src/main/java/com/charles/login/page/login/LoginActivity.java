@@ -22,6 +22,11 @@ import com.yinglan.keyboard.HideUtil;
  */
 @Route(path = "/login/LoginActivity")
 public class LoginActivity extends BaseActivity implements View.OnClickListener, LoginView {
+    private static final String TO_MAIN_TAB = "tab";
+    private static final String TO_MAIN_NAV = "nav";
+
+    private String mainPage = "";
+
     private EditText accountEdt;
     private EditText passwordEdt;
     private TextInputLayout passwordInput;
@@ -44,7 +49,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         passwordEdt = findViewById(R.id.login_password_edt);
         passwordInput = findViewById(R.id.login_password_input);
 
-        findViewById(R.id.login_login_btn).setOnClickListener(this);
+        findViewById(R.id.login_login_btn_tab).setOnClickListener(this);
+        findViewById(R.id.login_login_btn_nav).setOnClickListener(this);
         findViewById(R.id.login_register_btn).setOnClickListener(this);
         findViewById(R.id.login_forget_password_btn).setOnClickListener(this);
 
@@ -55,7 +61,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     @Override
     public void onClick(View v) {
         int viewId = v.getId();
-        if (viewId == R.id.login_login_btn) {
+        if (viewId == R.id.login_login_btn_tab) {
+            mainPage = TO_MAIN_TAB;
+            clickLoginBtn();
+        } else if (viewId == R.id.login_login_btn_nav) {
+            mainPage = TO_MAIN_NAV;
             clickLoginBtn();
         } else if (viewId == R.id.login_register_btn) {
             startActivity(new Intent(this, RegisterActivity.class));
@@ -81,7 +91,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     public void loginSucceed() {
-        ARouter.getInstance().build("/app/MainActivity").navigation();
+        switch (mainPage) {
+            case TO_MAIN_TAB:
+                ARouter.getInstance().build("/app/MainTabActivity").navigation();
+                break;
+            case TO_MAIN_NAV:
+                ARouter.getInstance().build("/app/MainNavActivity").navigation();
+                break;
+            default:
+                break;
+        }
     }
 
     @Override

@@ -6,7 +6,8 @@
     <string name="login_reset_password">重置密码</string>
     <string name="login_hint_account">请输入手机号/邮箱</string>
     <string name="login_hint_code">请输入验证码</string>
-    <string name="login_login">登录</string>
+    <string name="login_login_tab">登录(tab)</string>
+    <string name="login_login_nav">登录(nav)</string>
     <string name="login_confirm">确定</string>
     <string name="login_hint_get_code">获取验证码</string>
     <string name="login_hint_password">请输入密码</string>

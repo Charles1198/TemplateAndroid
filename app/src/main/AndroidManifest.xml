@@ -21,7 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.charles.templateandroid.fileprovider"
@@ -32,16 +31,20 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".page.splash.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <!--<activity android:name=".page.splash.SplashActivity">-->
+        <!--&lt;!&ndash;<intent-filter>&ndash;&gt;-->
+        <!--&lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".page.main.MainActivity" />
-        <activity android:name=".page.guide.GuideActivity" />
-        <activity android:name="com.charles.common.update.AndroidOPermissionActivity"></activity>
+        <!--&lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</intent-filter>&ndash;&gt;-->
+        <!--</activity>-->
+        <!--<activity android:name=".page.main.MainTabActivity" />-->
+        <!--<activity android:name=".page.guide.GuideActivity" />-->
+        <activity android:name="com.charles.common.update.AndroidOPermissionActivity" />
+        <activity
+            android:name=".page.MainNavActivity"
+            android:label="@string/title_activity_main_nav"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

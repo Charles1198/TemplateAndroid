@@ -1,11 +1,11 @@
 package com.charles.user.function.setting;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.common.base.BaseActivity;
 import com.charles.user.R;
@@ -15,6 +15,8 @@ import com.charles.user.function.feedback.FeedbackActivity;
  * @author charles
  * @date 2018/10/17
  */
+
+@Route(path = "/user/SettingActivity")
 public class SettingActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
@@ -55,12 +57,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private void clickLogoutBtn() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("退出登录")
-                .setPositiveButton("退出", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        ARouter.getInstance().build("/login/LoginActivity").navigation();
-                    }
-                })
+                .setPositiveButton("退出", (dialogInterface, i) ->
+                    ARouter.getInstance().build("/login/LoginActivity").navigation()
+                )
                 .setNegativeButton("取消", null)
                 .create().show();
     }

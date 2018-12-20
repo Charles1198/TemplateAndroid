@@ -12,7 +12,6 @@
         </activity>
         <activity android:name=".function.setting.SettingActivity" />
         <activity android:name=".function.feedback.FeedbackActivity" />
-        <activity android:name=".function.range.RangeActivity" />
     </application>
 
 </manifest>
