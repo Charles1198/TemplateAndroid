@@ -7,7 +7,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 
 import com.charles.common.Constant;
-import com.charles.common.app.BaseApplication;
+import com.charles.common.base.BaseApplication;
 import com.charles.common.util.AppUtil;
 
 import java.util.ArrayList;

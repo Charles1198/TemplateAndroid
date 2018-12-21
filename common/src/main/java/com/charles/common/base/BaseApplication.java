@@ -1,4 +1,4 @@
-package com.charles.common.app;
+package com.charles.common.base;
 
 import android.annotation.SuppressLint;
 import android.app.Application;

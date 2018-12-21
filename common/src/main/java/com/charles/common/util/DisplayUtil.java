@@ -2,7 +2,7 @@ package com.charles.common.util;
 
 import android.content.Context;
 
-import com.charles.common.app.BaseApplication;
+import com.charles.common.base.BaseApplication;
 
 /**
  *

@@ -10,10 +10,25 @@ import org.json.JSONObject;
  */
 
 public class DeviceInfo {
+    /**
+     * 设备唯一Id，
+     */
     private String deviceID;
+    /**
+     * 设备型号
+     */
     private String model;
+    /**
+     *  设备屏幕尺寸
+     */
     private String size;
+    /**
+     * 设备cpu型号
+     */
     private String cpu;
+    /**
+     * 设备存储容量
+     */
     private String memory;
 
     public DeviceInfo(String deviceID, String model, String size, String cpu, String memory) {

@@ -9,6 +9,9 @@ import android.util.Log;
  */
 
 public class LogUtil {
+    /**
+     * 控制是否打印log，上线时关闭
+     */
     private static boolean showLog = true;
 
     public static void d(String logMessage) {

@@ -31,16 +31,49 @@ public class ExceptionInfo {
      * exceptionAt : 1978-02-09 14:24:21
      */
 
+    /**
+     * 项目名
+     */
     private String shortName;
+    /**
+     * 崩溃类型： 1 Crash, 2 ANR
+     */
     private String exceptionType;
+    /**
+     * 应用版本
+     */
     private String appVersion;
+    /**
+     * 应用唯一id，由中心服务器生成
+     */
     private String deviceUUID;
+    /**
+     * 发生崩溃时设备连接网络类型： 0 无网络, 1 WiFi, 2 2G, 3 3G, 4 4G, 5 5G, 10 未知
+     */
     private String phoneNetwork;
+    /**
+     * 设备系统版本
+     */
     private String OSRelease;
+    /**
+     * 崩溃原因
+     */
     private String exceptionReason;
+    /**
+     * 崩溃堆栈信息
+     */
     private String exceptionTrace;
+    /**
+     * 崩溃时应用运行的线程信息
+     */
     private String threadName;
+    /**
+     * 崩溃时应用运行的线程堆栈信息
+     */
     private String threadTrace;
+    /**
+     * 崩溃时刻
+     */
     private String exceptionAt;
 
     public ExceptionInfo(Thread th, Throwable ex) {

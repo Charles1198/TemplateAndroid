@@ -7,8 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Handler;
 
 import com.charles.common.Constant;
-import com.charles.common.app.BaseApplication;
-import com.charles.common.kv.Kv;
+import com.charles.common.base.BaseApplication;
 
 /**
  * @author charles

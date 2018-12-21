@@ -1,7 +1,7 @@
 package com.example.charles.templateandroid.application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.charles.common.app.BaseApplication;
+import com.charles.common.base.BaseApplication;
 
 /**
  *

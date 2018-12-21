@@ -38,7 +38,6 @@ public class SubmitError {
 
             @Override
             public void onFailure(Call<BaseResp> call, Throwable t) {
-
             }
         });
     }

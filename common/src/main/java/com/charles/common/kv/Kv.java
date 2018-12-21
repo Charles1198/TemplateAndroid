@@ -9,6 +9,12 @@ import com.tencent.mmkv.MMKV;
  */
 public class Kv {
 
+    /**
+     * 检查数据是否存在
+     *
+     * @param key
+     * @return
+     */
     public static boolean contains(String key) {
         MMKV mmkv = MMKV.defaultMMKV();
         return mmkv.contains(key);
@@ -105,6 +111,7 @@ public class Kv {
 
     /**
      * 删除数据
+     *
      * @param key
      */
     public static void remove(String key) {

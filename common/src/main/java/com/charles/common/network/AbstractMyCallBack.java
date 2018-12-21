@@ -13,7 +13,7 @@ import retrofit2.Response;
 /**
  * @author charles
  * @date 2018/9/30
- * @description
+ * @description 对请求响应做初步处理，如果成功直接将响应数据传给调用方，如果失败则记录失败原因并将失败信息上传到中心服务器。
  */
 public abstract class AbstractMyCallBack<T> implements Callback<T> {
     @Override

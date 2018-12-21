@@ -1,8 +1,5 @@
 package com.charles.common.util;
 
-import android.content.Context;
-import android.content.Intent;
-
 import com.charles.common.kv.Kv;
 import com.charles.common.network.AbstractMyCallBack;
 import com.charles.common.network.ApiManager;
@@ -11,7 +8,6 @@ import com.charles.common.network.response.BaseResp;
 import com.charles.common.network.response.TokenResp;
 
 import retrofit2.Call;
-import retrofit2.Response;
 
 /**
  *

@@ -4,7 +4,7 @@ import android.os.Looper;
 import android.widget.Toast;
 
 import com.charles.common.Constant;
-import com.charles.common.app.BaseApplication;
+import com.charles.common.base.BaseApplication;
 import com.charles.common.error.model.ExceptionInfo;
 import com.charles.common.kv.Kv;
 

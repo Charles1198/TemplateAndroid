@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 
 import com.charles.common.Constant;
-import com.charles.common.app.BaseApplication;
+import com.charles.common.base.BaseApplication;
 import com.charles.common.network.AbstractMyCallBack;
 import com.charles.common.network.ApiManager;
 import com.charles.common.network.NetworkUtil;

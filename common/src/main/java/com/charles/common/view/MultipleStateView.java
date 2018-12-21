@@ -1,4 +1,4 @@
-package com.charles.common.multiple;
+package com.charles.common.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;

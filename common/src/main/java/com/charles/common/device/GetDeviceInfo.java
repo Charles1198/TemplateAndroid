@@ -9,7 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 
-import com.charles.common.app.BaseApplication;
+import com.charles.common.base.BaseApplication;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

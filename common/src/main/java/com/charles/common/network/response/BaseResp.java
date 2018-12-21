@@ -5,17 +5,25 @@ import android.support.annotation.NonNull;
 import com.google.gson.Gson;
 
 /**
- *
  * @author charles
  * @date 16/9/29
+ * <p>
+ * 返回数据的基本格式
  */
 
 public class BaseResp<T> {
 
+    /**
+     * 响应数据，
+     */
     private T data;
-
+    /**
+     * 响应码
+     */
     private String statusCode;
-
+    /**
+     * 响应信息
+     */
     private String message;
 
     public String getMessage() {
