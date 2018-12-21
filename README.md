@@ -93,23 +93,23 @@ base 文件夹中存放一些基类，其文件结构如下所示：
     |-BaseView.java
 ```
 
-- BaseApplicition
+- BaseApplicition.java
 
-  BaseApplicition 继承自 Application， 提供了全局的 Context， 执行某些初始化操作。
+  BaseApplicition.java 继承自 Application， 提供了全局的 Context， 执行某些初始化操作。
 
   每个 Android App 运行时，会首先自动创建 Application 类并实例化 Application 对象，且只有一个，它的生命周期贯穿 App 的始终。
 
-- BaseActivity
+- BaseActivity.java
 
-  BaseActivity 继承自 AppCompatActivity，是程序中所有 Activity 的基类（也可根据情况不继承它），提供了每个 Activity 都可能用到的一些公用方法，如显示 Loading、Alert 弹框、监听与安装程序更新等。
+  BaseActivity.java 继承自 AppCompatActivity，是程序中所有 Activity 的基类（也可根据情况不继承它），提供了每个 Activity 都可能用到的一些公用方法，如显示 Loading、Alert 弹框、监听与安装程序更新等。
 
-- BaseFragment
+- BaseFragment.java
 
-  BaseFragment 继承自 Fragment， 是程序中所有 Fragment 的基类（也可根据情况不继承它），提供了每个 Fragment 都可能用到的一些公用方法。
+  BaseFragment.java 继承自 Fragment， 是程序中所有 Fragment 的基类（也可根据情况不继承它），提供了每个 Fragment 都可能用到的一些公用方法。
 
-- BasePresenter
+- BasePresenter.java
 
-  BasePresenter （其作用会在后面讲到）是程序中所有 Fragment 的基类（也可根据情况不继承它），提供了每个 Fragment 都可能用到的一些公用方法。
+  BasePresenter.java （其作用会在后面讲到）是程序中所有 Fragment 的基类（也可根据情况不继承它），提供了每个 Fragment 都可能用到的一些公用方法。
 
 - BaseView
 
@@ -125,9 +125,9 @@ device
     |-GetDeviceInfo.java
 ```
 
-- DeviceInfo
+- DeviceInfo.java
 
-  DeviceInfo 是一个对象，规定了设备硬件信息的属性。属性含义详见类内注释。
+  DeviceInfo.java 是一个对象，规定了设备硬件信息的属性。属性含义详见类内注释。
 
   ```java
   public class DeviceInfo {
@@ -141,9 +141,9 @@ device
   }
   ```
 
-- GetDeviceInfo
+- GetDeviceInfo.java
 
-  GetDeviceInfo 是一个获取 DeviceInfo 各个属性的工具类。
+  GetDeviceInfo.java 是一个获取 DeviceInfo 各个属性的工具类。
 
 #### error
 
@@ -155,9 +155,9 @@ error 文件夹下存放程序崩溃信息和网络连接错误信息。
     |-ExceptionInfo.java
 ```
 
-- ApiErrorInfo
+- ApiErrorInfo.java
 
-  ApiErrorInfo 规定了网络连接失败时需要收集哪些信息报告给中心服务器，方便开发人员定位崩溃原因，及时修复程序 bug。属性含义详见类内注释。
+  ApiErrorInfo.java 规定了网络连接失败时需要收集哪些信息报告给中心服务器，方便开发人员定位崩溃原因，及时修复程序 bug。属性含义详见类内注释。
 
   ```java
   public class ApiErrorInfo {
@@ -172,9 +172,9 @@ error 文件夹下存放程序崩溃信息和网络连接错误信息。
   }
   ```
 
-- ExceptionInfo
+- ExceptionInfo.java
 
-  ExceptionInfo 规定了程序崩溃时需要收集哪些信息报告给中心服务器，方便开发人员定位崩溃原因，及时修复程序 bug。属性含义详见类内注释。
+  ExceptionInfo.java 规定了程序崩溃时需要收集哪些信息报告给中心服务器，方便开发人员定位崩溃原因，及时修复程序 bug。属性含义详见类内注释。
 
   ```java
   public class ExceptionInfo {
@@ -220,7 +220,7 @@ network 文件夹存放网络操作相关类，是对 retrofit 的简单封装�
 
 - response/BaseResponse.java
 
-  BaseResponse 规定了网络请求返回的基本格式（只在我们自己的网络请求中生效，是内部约定，基本不变）。
+  BaseResponse.java 规定了网络请求返回的基本格式（只在我们自己的网络请求中生效，是内部约定，基本不变）。
 
   ```java
   public class BaseResp<T> {
@@ -230,19 +230,19 @@ network 文件夹存放网络操作相关类，是对 retrofit 的简单封装�
   }
   ```
 
-- AbstractMyCallBack
+- AbstractMyCallBack.java
 
   对请求响应做初步处理，如果成功直接将响应数据传给调用方，如果失败则记录失败原因并将失败信息上传到中心服务器。
 
-- ApiManager
+- ApiManager.java
 
   管理请求地址与参数。
 
-- NetworkUtil
+- NetworkUtil.java
 
   网络操作工具类。
 
-- SubmitError
+- SubmitError.java
 
   提交程序崩溃信息和网络连接错误信息的工具类。
 
@@ -257,17 +257,17 @@ update 文件夹存放检查程序版本更新和安装  更新的工具类。
     |-UpdateService.java
 ```
 
-- AndroidOPermissionActivity
+- AndroidOPermissionActivity.java
 
-  AndroidOPermissionActivity 是在 Android 8.0 以上的版本中，用来提示用户向程序授予安装更新 apk 权限的页面。
+  AndroidOPermissionActivity.java 是在 Android 8.0 以上的版本中，用来提示用户向程序授予安装更新 apk 权限的页面。
 
-- CheckUpdate
+- CheckUpdate.java
 
-  CheckUpdate 是用来检查版本更新的工具类。
+  CheckUpdate.java 是用来检查版本更新的工具类。
 
-- UpdateService
+- UpdateService.java
 
-  UpdateService 是用来在后台下载和更新程序的服务。
+  UpdateService.java 是用来在后台下载和更新程序的服务。
 
 #### util
 
@@ -289,51 +289,51 @@ util 文件夹存放一些基础工具类。
     |-TokenUtil.java
 ```
 
-- AlertUtil
+- AlertUtil.java
 
-  AlertUtil 对 AlertDialog 的简单封装，用一行代码唤起一个 AlertDialog。
+  AlertUtil.java 对 AlertDialog 的简单封装，用一行代码唤起一个 AlertDialog。
 
-- AnimUtil
+- AnimUtil.java
 
   执行动画的工具类。
 
-- AppUtil
+- AppUtil.java
 
   获取程序基本信息。
 
-- DateUtil
+- DateUtil.java
 
   操作日期。
 
-- DisplayUtil
+- DisplayUtil.java
 
   px、dp、sp 之间相互转换。
 
-- FileUtil
+- FileUtil.java
 
   文件操作。
 
-- ImageUtil
+- ImageUtil.java
 
   图片操作。
 
-- LogUtil
+- LogUtil.java
 
   对 Log 的简单封装。在程序上线时要将其 showLog 属性设为 false，不打印 log。
 
-- StringUtil
+- StringUtil.java
 
   字符串操作。
 
-- TimeCount
+- TimeCount.java
 
    倒计时。
 
-- ToastUtil
+- ToastUtil.java
 
   对开源库 com.hjq:toast 的简单封装，代替系统 Toast，解决了有些机型关闭通知权限无法弹出 Toast 的问题。
 
-- TokenUtil
+- TokenUtil.java
 
   封装了 token 的存、取、刷新。
 
@@ -346,14 +346,43 @@ view 文件夹存放通用的自定义 View。
     MultipleStateView.java
 ```
 
-- MultipleStateView
+- MultipleStateView.java
 
   通用的多状态占位页面，包括加载页面、空数据页面、网络连接错误页面、无网络页面。
 
-#### Constant
+#### Constant.java
 
 Constant.java 保存项目中使用的常量。
 
 ## 代码规范
 
-## 变量命名规范
+项目代码规范统一使用[阿里巴巴 Java 开发手册](https://github.com/alibaba/p3c)。
+
+在 Android Studio 中安装 **Alibaba Java Coding Guidelines** 插件对代码自动进行格式检查。
+
+**补充**：
+
+https://blog.csdn.net/vipzjyno1/article/details/23542617
+
+1. 所有非 app 模块中的资源文件（.xml）明明要加前缀（模块名\_XX.xml）。
+
+   在 build.gradle(模块) 中添加以下代码，程序在编译过程中会自动对不符合规范的文件进行提示。
+
+   ```
+   android {
+       ...
+       defaultConfig {
+           ...
+           //防止资源文件冲突，为每个模块下的资源文件加前缀
+           resourcePrefix "模块名_"
+       }
+   }
+   ```
+
+2. 布局文件控件 id 命名规则：
+
+## 使用
+
+1. 克隆到本地。
+
+2. 修改 app 包名与 build.gradle(app)中的 applicationId。

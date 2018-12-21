@@ -1,4 +1,4 @@
-package com.example.charles.templateandroid;
+package com.example.charles.template;
 
 import org.junit.Test;
 

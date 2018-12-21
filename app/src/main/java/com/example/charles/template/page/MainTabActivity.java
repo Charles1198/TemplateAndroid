@@ -1,4 +1,4 @@
-package com.example.charles.templateandroid.page;
+package com.example.charles.template.page;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,7 +10,7 @@ import android.os.Bundle;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.charles.module1.page.main.Module1Fragment;
 import com.charles.user.function.main.UserFragment;
-import com.example.charles.templateandroid.R;
+import com.example.charles.template.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.charles.templateandroid.page;
+package com.example.charles.template.page;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.module1.page.main.Module1Fragment;
-import com.example.charles.templateandroid.R;
+import com.example.charles.template.R;
 
 /**
  * @author charles

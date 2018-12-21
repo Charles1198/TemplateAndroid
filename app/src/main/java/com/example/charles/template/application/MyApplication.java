@@ -1,4 +1,4 @@
-package com.example.charles.templateandroid.application;
+package com.example.charles.template.application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.common.base.BaseApplication;

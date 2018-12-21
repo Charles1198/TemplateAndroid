@@ -1,4 +1,4 @@
-package com.example.charles.templateandroid;
+package com.example.charles.template;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
