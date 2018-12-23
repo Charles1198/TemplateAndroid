@@ -58,5 +58,6 @@ dependencies {
     implementation project(':common')
     implementation project(':resource')
 
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 }

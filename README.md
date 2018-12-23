@@ -4,8 +4,6 @@
 
 这是一个 Android 模版工程，根据本人三年来开发经验制作，规定了项目基础模块划分、文件夹结构、代码规范、变量命名规范等。目的是规范开发流程，省去项目初始化步骤，方便新人上手，方便合作开发。
 
-## 功能
-
 ## 项目结构
 
 ### 层次划分
@@ -360,29 +358,146 @@ Constant.java 保存项目中使用的常量。
 
 在 Android Studio 中安装 **Alibaba Java Coding Guidelines** 插件对代码自动进行格式检查。
 
-**补充**：
+##  命名规范
 
 https://blog.csdn.net/vipzjyno1/article/details/23542617
 
-1. 所有非 app 模块中的资源文件（.xml）明明要加前缀（模块名\_XX.xml）。
+讲解命名规范前，先初略介绍下当前主要的标识符命名法和英文缩写规则。
 
-   在 build.gradle(模块) 中添加以下代码，程序在编译过程中会自动对不符合规范的文件进行提示。
+**标识符命名法**主要有 4 种：
 
-   ```
-   android {
-       ...
-       defaultConfig {
-           ...
-           //防止资源文件冲突，为每个模块下的资源文件加前缀
-           resourcePrefix "模块名_"
-       }
-   }
-   ```
+1. 驼峰(Camel)命名法:又称小驼峰命名法，除首单词外，其余所有单词的第一个字母大写。
 
-2. 布局文件控件 id 命名规则：
+2. 帕斯卡(pascal)命名法:又称大驼峰命名法，所有单词的第一个字母大写。
+
+3. 下划线命名法:单词与单词间用下划线做间隔。
+
+4. 匈牙利命名法:开头字母用变量类型的缩写，其余部分用变量的英文或英文的缩写，要求单词第一个字母大写。
+
+标识符命名原则:**尽可能的用最少的字符而又能完整的表达标识符的含义**。
+
+下面为常见的**英文单词缩写**:
+
+| 名称        | 缩写                        |
+| ----------- | --------------------------- |
+| icon        | ic（主要用在 app 的小图标） |
+| average     | ave                         |
+| background  | bg                          |
+| document    | doc                         |
+| error       | err                         |
+| information | info                        |
+| initial     | init                        |
+| image       | img                         |
+| length      | len                         |
+| library     | lib                         |
+| message     | msg                         |
+| passwrod    | pwd                         |
+| position    | pos                         |
+| string      | str                         |
+|             |                             |
+
+程序中使用单词缩写原则：**不要用缩写，除非该缩写是约定俗成的**。
+
+上面只是一些建议，在开发中可以使用缩写也可以不使用。
+
+### 命名规范
+
+1.  包（packages）: 采用反域名命名规则，全部使用小写字母。一级包名为 com，二级包名为 xx（可以是公司或则个人的随便），三级包名根据应用进行命名，四级及以上包名为模块名或层级名。
+
+2.  类（classes）：名词，采用大驼峰命名法，尽量避免缩写，除非该缩写是众所周知的， 比如 HTML,URL，如果类名称中包含单词缩写，则单词缩写的每个字母均应大写。
+
+    举例
+
+    | 类                  | 描述                    | 例如                            |
+    | ------------------- | ----------------------- | ------------------------------- |
+    | activity 类         | Activity 为后缀标识     | 欢迎页面类 WelcomeActivity      |
+    | adapter 类          | Adapter 为后缀标识      | 新闻详情适配器 NewDetailAdapter |
+    | Service 类          | 以 Service 为后缀标识   | 时间服务 TimeService            |
+    | BroadcastReceive 类 | 以 Broadcast 为后缀标识 | 时间通知 TimeBroadcast          |
+    | 工具类              | Util 为后缀标识         | 字符串工具类 StringUtil         |
+    | 基础类              | 以 Base 开头            | BaseActivity,BaseFragment       |
+    |                     |                         |
+
+3.  接口（interface）：命名规则与类一样采用大驼峰命名法。
+
+4.  方法（methods）：动词或动名词，采用小驼峰命名法。
+
+    | 类                   | 描述                                                         |
+    | -------------------- | ------------------------------------------------------------ |
+    | initXXX()            | 初始化相关方法,使用 init 为前缀标识，如初始化布局 initView() |
+    | isXX(),checkXX()     | 返回值为 boolean 型的请使用 is 或 check 为前缀标识           |
+    | getXX()              | 返回某个值的方法，使用 get 为前缀标识                        |
+    | saveXX()             | 与保存数据相关的，使用 save 前缀标识                         |
+    | clearXX(),removeXX() | 清除数据相关                                                 |
+    |                      |                                                              |
+
+5.  变量（variables）采用小驼峰命名法。类中控件名称必须与 xml 布局 id 保持一致。
+
+    用统一的量词通过在结尾处放置一个量词，就可创建更加统一的变量，它们更容易理解，也更容易搜索。例如，请使用 strCustomerFirst 和 strCustomerLast，而不要使用 strFirstCustomer 和 strLastCustomer。
+
+    量词列表：量词后缀说明
+    First   一组变量中的第一个
+    Last    一组变量中的最后一个
+    Next    一组变量中的下一个变量
+    Prev    一组变量中的上一个
+    Cur     一组变量中的当前变量
+
+6.  常量（Constants）全部大写,采用下划线命名法.例如：MIN_WIDTH。
+
+7.  图片资源（drawable、mipmap 文件夹下）：全部小写，采用下划线命名法，加前缀 ic 或 img 区分。
+
+8.  布局文件（layout 布局文件）全部小写，采用下划线命名法。
+
+    (1) Activity 布局：activity_XX.xml
+
+    (2) Dialog 命名：dialog_XX.xml
+
+    (3) 列表项命名： item_XX.xml
+
+    (4) 包含项：include_XX.xml
+
+    (5) 自定义 view：view_XX.xml
+
+9.  动画文件（anim 文件夹下）：全部小写，采用下划线命名法，加前缀区分。
+
+    | 动画命名例子     | 描述       |
+    | ---------------- | ---------- |
+    | fade_in          | 淡入       |
+    | fade_out         | 淡出       |
+    | push_down_in     | 从下方推入 |
+    | push_down_out    | 从下方推出 |
+    | slide_in         | 滑动进入   |
+    | shrink_to_middle | 向中间缩小 |
+
+10. 资源 ID（resourcesid）：大小写规范与方法名一致，采用小驼峰命名法。命名规范为“资源控件的缩写 名”+“变量名”。注意：页面控件名称应该和控件 id 名保持一致。
+
+    strings.xml，colors.xml 等中的 id 命名模式：activity 名称*功能模块名称*逻辑名称/activity 名称*逻辑名称/common*逻辑名称
+
+    strings.xml 中，使用 activity 名称注释，将文件内容区分开来
+
+11. layout 中的 id 命名模式为：view 缩写\_模块名称\_view 的逻辑名称。
+
+    常用 view 的缩写详情如下：
+
+    | view         | 缩写  |
+    | ------------ | ----- |
+    | LayoutView   | lv    |
+    | RelativeView | rv    |
+    | TextView     | tv    |
+    | ImageView    | iv    |
+    | CheckBox     | cb    |
+    | RadioButton  | rb    |
+    | EditText     | edt   |
+    | WebView      | webVi |
+    | RecyclerView | rv    |
+    |              |       |
 
 ## 使用
 
 1. 克隆到本地。
 
 2. 修改 app 包名与 build.gradle(app)中的 applicationId。
+
+3. 注释掉 build.gradle(app)中对 Module1 的依赖。
+
+4. 根据需要编写自己的业务模块。

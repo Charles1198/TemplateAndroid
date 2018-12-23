@@ -3,6 +3,8 @@ package com.charles.common.util;
 import android.content.Context;
 import android.util.Log;
 
+import com.charles.common.base.BaseApplication;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +28,8 @@ public class FileUtil {
      * @param fileName
      * @return
      */
-    public static boolean hasFile(Context context, String fileName) {
+    public static boolean hasFile(String fileName) {
+        Context context = BaseApplication.getContext();
         try {
             FileInputStream inputStream = context.openFileInput(fileName);
             if (inputStream != null) {
@@ -43,7 +46,8 @@ public class FileUtil {
         return file.exists();
     }
 
-    public static String getImageDirectory(Context context) {
+    public static String getImageDirectory() {
+        Context context = BaseApplication.getContext();
         File file = new File(context.getExternalCacheDir() + "/image");
         if (!file.exists()) {
             file.mkdir();
@@ -52,7 +56,8 @@ public class FileUtil {
 
     }
 
-    public static String getFileDirectory(Context context) {
+    public static String getFileDirectory() {
+        Context context = BaseApplication.getContext();
         File file = new File(context.getExternalCacheDir() + "/file");
         if (!file.exists()) {
             file.mkdir();
@@ -120,11 +125,11 @@ public class FileUtil {
     /**
      * 存一段字符串
      *
-     * @param context
      * @param s
      * @param fileName
      */
-    public static void writeStringToFile(Context context, String s, String fileName) {
+    public static void writeStringToFile(String s, String fileName) {
+        Context context = BaseApplication.getContext();
         try {
             FileOutputStream outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
             outputStream.write(s.getBytes());
@@ -137,11 +142,11 @@ public class FileUtil {
     /**
      * 读一段字符串
      *
-     * @param context
      * @param fileName
      * @return
      */
-    public static String readStringFromFile(Context context, String fileName) {
+    public static String readStringFromFile(String fileName) {
+        Context context = BaseApplication.getContext();
         String string = "";
         try {
             InputStream inputStream = context.openFileInput(fileName);
@@ -169,11 +174,11 @@ public class FileUtil {
     /**
      * 从assets目录中读取字符串
      *
-     * @param context
      * @param fileName
      * @return
      */
-    public static String getStringFromAssets(Context context, String fileName) {
+    public static String getStringFromAssets(String fileName) {
+        Context context = BaseApplication.getContext();
         String result = "";
         try {
             InputStreamReader inputReader = new InputStreamReader(context.getResources().getAssets().open(fileName));

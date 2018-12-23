@@ -1,5 +1,6 @@
 package com.charles.module1.page.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -14,6 +15,7 @@ import com.charles.common.base.BaseFragment;
 import com.charles.common.util.LogUtil;
 import com.charles.common.util.ToastUtil;
 import com.charles.module1.R;
+import com.charles.module1.page.avatar.AvatarActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,15 +38,22 @@ public class Module1Fragment extends BaseFragment {
         recyclerView.setLayoutManager(layoutManager);
 
         List<String> functionList = new ArrayList<>();
-        functionList.add("视频播放");
+        functionList.add("更换头像");
         functionList.add("图片操作");
         Module1FragmentAdapter adapter = new Module1FragmentAdapter(functionList);
         recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                ToastUtil.toast("click at " + position);
-            }
-        });
+        adapter.setOnItemClickListener((adapter1, view1, position) -> jumpTo(position));
+    }
+
+    private void jumpTo(int position) {
+        Intent intent;
+        switch (position) {
+            case 0:
+                intent = new Intent(context, AvatarActivity.class);
+                break;
+            default:
+                return;
+        }
+        startActivity(intent);
     }
 }
