@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.charles.common.custom.NoTouchWebView
+        android:id="@+id/skeleton_webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/skeleton_fix_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eaeaea"
+        android:minHeight="80dp"/>
+
+    <FrameLayout
+        android:id="@+id/skeleton_move_view"
+        android:layout_width="16dp"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1"
+        android:minHeight="80dp"/>
+
+</FrameLayout>
