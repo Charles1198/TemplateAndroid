@@ -382,7 +382,21 @@ resource 模块文件结构如下所示：
 
 ### begin 模块
 
+begin 模块是程序启动的入口，包含启动页和引导页。
 
+```
+-Begin
+    |...
+    |-java
+        |-com
+            |-charles
+```
+
+其中启动页（SplashActivity）是程序启动后第一个唤起的页面，在该页面中进行了程序初始化的一些操作，程序初始化流程较为复杂，参考下图：
+
+![](./readmeImage/image_begin_init.png)
+
+整个流程已经实现，使用者只需在 SplashActivity.java 中实现 SplashView 接口方法进行页面跳转即可，SplashView 接口方法含义见注释。
 
 ## 代码规范
 
@@ -529,7 +543,8 @@ resource 模块文件结构如下所示：
 
 2. 修改 app 包名与 build.gradle(app)中的 applicationId。
 
-![](./readmeImage/image_change_package_name.png)
+   修改包名方式如下：
+   ![](./readmeImage/image_change_package_name.png)
 
 3. 注释掉 build.gradle(app)中对 Module1 的依赖。
 

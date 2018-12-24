@@ -33,7 +33,7 @@
 
         <activity android:name="com.charles.common.update.AndroidOPermissionActivity" />
         <activity
-            android:name="com.example.charles.template.page.MainNavActivity"
+            android:name="com.example.charles.template.page.main.MainNavActivity"
             android:label="@string/title_activity_main_nav"
             android:theme="@style/AppTheme" />
     </application>

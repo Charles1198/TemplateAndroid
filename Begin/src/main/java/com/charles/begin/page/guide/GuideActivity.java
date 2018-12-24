@@ -1,11 +1,11 @@
-package com.charles.main.page.guide;
+package com.charles.begin.page.guide;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.common.kv.Kv;
-import com.charles.main.R;
+import com.charles.begin.R;
 
 /**
  * @author charles

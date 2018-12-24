@@ -1,4 +1,4 @@
-package com.charles.main.page.splash;
+package com.charles.begin.page.splash;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +14,8 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.charles.common.base.BaseActivity;
 import com.charles.common.network.response.ServerResp;
 import com.charles.common.util.ToastUtil;
-import com.charles.main.R;
-import com.charles.main.page.guide.GuideActivity;
+import com.charles.begin.R;
+import com.charles.begin.page.guide.GuideActivity;
 
 import java.util.List;
 

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.charles.main">
+    package="com.charles.begin">
 
     <application
         android:allowBackup="true"

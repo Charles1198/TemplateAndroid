@@ -1,4 +1,4 @@
-package com.example.charles.template.page;
+package com.example.charles.template.page.main;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;

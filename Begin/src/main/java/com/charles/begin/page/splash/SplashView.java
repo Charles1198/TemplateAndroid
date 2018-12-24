@@ -1,4 +1,4 @@
-package com.charles.main.page.splash;
+package com.charles.begin.page.splash;
 
 import com.charles.common.base.BaseView;
 import com.charles.common.network.response.ServerResp;

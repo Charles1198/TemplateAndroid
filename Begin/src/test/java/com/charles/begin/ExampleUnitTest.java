@@ -1,4 +1,4 @@
-package com.charles.main;
+package com.charles.begin;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.charles.main.page.splash;
+package com.charles.begin.page.splash;
 
 import com.charles.common.Constant;
 import com.charles.common.device.DeviceInfo;
@@ -14,7 +14,7 @@ import com.charles.common.network.response.TokenResp;
 import com.charles.common.network.response.UUIDResp;
 import com.charles.common.update.CheckUpdate;
 import com.charles.common.util.AppUtil;
-import com.charles.main.page.guide.GuideActivity;
+import com.charles.begin.page.guide.GuideActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
